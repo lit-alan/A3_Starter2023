@@ -1,0 +1,37 @@
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>All Customers</title>
+</head>
+<body>
+
+<table style="width:100%">
+    <tr>
+        <th align="left">customerId</th>
+        <th align="left">firstName</th>
+        <th align="left">lastName</th>
+        <th align="left">email</th>
+        <th align="left">phone</th>
+        <th align="left">address</th>
+        <th align="left">city</th>
+        <th align="left">country</th>
+        <th align="left">postcode</th>
+        <th align="left">Actions</th>
+    </tr>
+    <tr th:each="c: ${cList}">
+        <td><span th:text="${c.customerId}"></span></td>
+        <td><span th:text="${c.firstName}"></span></td>
+        <td><span th:text="${c.lastName}"></span></td>
+        <td><span th:text="${c.email}"></span></td>
+        <td><span th:text="${c.phone}"></span></td>
+        <td><span th:text="${c.address}"></span></td>
+        <td><span th:text="${c.city}"></span></td>
+        <td><span th:text="${c.country}"></span></td>
+        <td><span th:text="${c.postcode}"></span></td>
+        <td>Delete Edit Add</td>
+    </tr>
+</table>
+</body>
+</html>
